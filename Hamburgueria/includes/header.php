@@ -17,7 +17,7 @@
 			<?php  if(isset($_SESSION['usuario'])){
 				
 			?>	
-			<a class="login-logout" href="/ProjectPrincipal/includes/logout.php">Logout</a>
+			<a class="login-logout" href="/Hamburgueria/includes/logout.php">Logout</a>
 			<?php
 			}
 			else {
