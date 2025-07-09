@@ -1,0 +1,164 @@
+
+body {
+	/*background-color:#1E90FF;*/
+	background-image: url('../images/bkg/.jpeg');
+}
+
+header {
+	border: 1px solid #000000;
+	height: 200px;
+
+}
+
+#login {
+	float: right;
+	margin-right: 20px;
+	margin-top: 15px;
+}
+
+table {
+	border: 1px solid black;
+	padding: 15px;
+	margin: 15px;
+
+
+
+}
+
+td {
+	border: 1px solid black;
+	padding: 15px;
+	font-size: 20px;
+
+}
+
+tr {
+	border: 1px solid black;
+	padding: 15px;
+	margin: 15px;
+	font-size: 35px;
+
+}
+
+header img {
+	height: 180px;
+
+}
+
+nav {
+	border: 1px solid #b36060;
+	height: 80px;
+	margin: auto 0;
+	background-color: #f00505;
+	background-image: linear-gradient(to top, #ca1c1c, #ca1c1c, #d10e0e, #ff0000, #ff0000);
+	padding-top: 10px;
+	position: sticky;
+	top: 0;
+}
+
+nav li {
+	display: inline;
+	margin-left: 25px;
+
+
+}
+
+nav li a {
+	margin-top: 50px;
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 24px;
+	padding-top: 35px;
+	padding-bottom: 40px;
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: center;
+	justify-content: center;
+
+}
+
+nav li a:hover {
+	color: #000000;
+	background-color: #ffffff;
+
+
+}
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	min-height: 400px;
+	border: 1px solid #000000;
+}
+
+#content {
+
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	border: 1px solid #000000;
+	min-height: 400px;
+	
+}
+.sobre {
+	text-align: center;
+	font-size:30px;
+}
+
+#content h1 {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	color: #ca1c1c;
+	text-align: center;
+	
+}
+.objetivo{
+	text-align: center;
+	color: #ca1c1c;
+	font-size: 45px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.lista {
+	margin: 0 auto;
+	width: 80%;
+}
+
+footer {
+	border: 1px solid #ca1c1c;
+	height: 100px;
+	width: 100%;
+	background-color: #ca1c1c;
+	
+}
+
+footer p {
+	color: #ffffff;
+	text-align: center;
+	margin-top: 40px;
+
+}
+
+.inputValues {
+	border: 1px solid rgba(187, 187, 187, 1);
+	width: 50%;
+	border-radius: 4px;
+	height: 37px;
+	font-weight: 700;
+	border-radius: 4px;
+	border-width: 1px;
+	font-size: 16px;
+	margin-bottom: 15px;
+	padding-left: 18px;
+	color: #555555;
+	appearance: none;
+}
+.login-logout{
+	text-decoration: none;
+	color: #ca1c1c;
+	font-size: 24px;
+}
