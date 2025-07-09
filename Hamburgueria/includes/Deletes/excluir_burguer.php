@@ -22,8 +22,8 @@ if ($dados && !empty($dados['src'])) {
 $sql = "DELETE FROM menuburguers WHERE id_burguer = $id";
 
 if (execute_query($sql)) {
-    header("Location: /ProjectPrincipal/edit_burguer.php?Mensagem=Sucesso");
+    header("Location: /Hamburgueria/edit_burguer.php?Mensagem=Sucesso");
 } else {
-    header("Location: /ProjectPrincipal/edit_burguer.php?Mensagem=Erro");
+    header("Location: /Hamburgueria/edit_burguer.php?Mensagem=Erro");
 }
 ?>
