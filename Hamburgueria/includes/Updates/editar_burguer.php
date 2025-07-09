@@ -14,7 +14,7 @@
 							
 							else
 							{
-								header("Location:/ProjectPrincipal/burguer.php?Mensagem=ErroEDITAR");
+								header("Location:/Hamburgueria/burguer.php?Mensagem=ErroEDITAR");
 							}
 							
 						
