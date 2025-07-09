@@ -29,7 +29,7 @@
 					if($usuario=mysqli_fetch_row($resultado)){
 						print_r($usuario);
 						$_SESSION['usuario']=$usuario;
-						header("Location: /ProjectPrincipal/index.php");
+						header("Location: /Hamburgueria/index.php");
 					}
 					else{
 						echo "usuario nao encontrado";
@@ -49,7 +49,7 @@
 
 ?>
 
-<form action="/ProjectPrincipal/login.php" method="post">
+<form action="/Hamburgueria/login.php" method="post">
 					<br/>
 					<br/>
 					<p> Usuario:<input class="inputValues" type="text" name="usuario"/></p>
