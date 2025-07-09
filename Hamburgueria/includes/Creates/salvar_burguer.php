@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['imagem']) && !empty(
     $permitidas = ['jpg', 'jpeg', 'png', 'gif'];
     if (!in_array($extensao, $permitidas)) {
         $_SESSION['mensagem'] = "Formato de imagem não permitido!";
-        header("Location: /ProjectPrincipal/burguer.php");
+        header("Location: /Hamburgueria/burguer.php");
         exit;
     }
 
@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['imagem']) && !empty(
         $src = $nomeFinal;
     } else {
         $_SESSION['mensagem'] = "Erro ao enviar a imagem.";
-        header("Location: /ProjectPrincipal/burguer.php");
+        header("Location: /Hamburgueria/burguer.php");
         exit;
     }
 }
@@ -75,9 +75,9 @@ if (empty($_POST['id_burguer'])) {
 // Executa e redireciona
 if (execute_query($sql)) {
     $_SESSION['mensagem'] = "Sucesso";
-    header("Location: /ProjectPrincipal/edit_burguer.php");
+    header("Location: /Hamburgueria/edit_burguer.php");
 } else {
     $_SESSION['mensagem'] = "Erro ao salvar";
-    header("Location: /ProjectPrincipal/edit_burguer.php");
+    header("Location: /Hamburgueria/edit_burguer.php");
 }
 ?>
