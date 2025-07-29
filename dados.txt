@@ -1,0 +1,8 @@
+if0_39589618
+
+MySql
+
+nome de usuario: if0_39589618
+nome: if0_39589618_XXX
+Senha: F6o4M5PtR3d  
+porta: 3306
