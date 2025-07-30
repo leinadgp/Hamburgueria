@@ -1,29 +1,45 @@
-<?php 
-include "../config.php";  
-include "../conecta.php";
+<?php
+ob_start(); // Inicia buffer para evitar erros de redirecionamento
 
-// ID do hambúrguer a ser excluído
-$id = $_GET['id_burguer'];
+include "../../includes/config.php";  
+include "../../includes/conecta.php";
 
-// Passo 1: Buscar caminho da imagem no banco
-$res = execute_query("SELECT src FROM menuburguers WHERE id_burguer = $id");
-$dados = $res->fetch_assoc();
+// Verifica se o ID foi enviado e é um número válido
+if (isset($_GET['id_burguer']) && is_numeric($_GET['id_burguer'])) {
+    $id = intval($_GET['id_burguer']); // Sanitiza o ID
 
-if ($dados && !empty($dados['src'])) {
-    $caminhoImagem = "../../assets/images/burguer/" . $dados['src']; // ajusta para o caminho real
+    // Passo 1: Buscar caminho da imagem no banco
+    $res = execute_query("SELECT src FROM menuburguers WHERE id_burguer = $id");
 
-    // Passo 2: Verifica se a imagem existe e exclui
-    if (file_exists($caminhoImagem)) {
-        unlink($caminhoImagem);
+    if ($res) {
+        $dados = $res->fetch_assoc();
+
+        if ($dados && !empty($dados['src'])) {
+            $caminhoImagem = "../../assets/images/burguer/" . $dados['src'];
+
+            // Passo 2: Verifica se a imagem existe e exclui
+            if (file_exists($caminhoImagem)) {
+                unlink($caminhoImagem);
+            }
+        }
     }
-}
 
-// Passo 3: Exclui o registro do banco
-$sql = "DELETE FROM menuburguers WHERE id_burguer = $id";
+    // Passo 3: Exclui o registro do banco
+    $sql = "DELETE FROM menuburguers WHERE id_burguer = $id";
 
-if (execute_query($sql)) {
-    header("Location: https://danielguimaraes.infinityfree.me/edit_burguer.php?Mensagem=Sucesso");
+    if (execute_query($sql)) {
+        ob_end_clean(); // Limpa qualquer saída
+        header("Location: ../../edit_burguer.php?Mensagem=Sucesso");
+        exit;
+    } else {
+        ob_end_clean();
+        header("Location: ../../edit_burguer.php?Mensagem=Erro");
+        exit;
+    }
 } else {
-    header("Location: https://danielguimaraes.infinityfree.me/edit_burguer.php?Mensagem=Erro");
+    // Se não foi enviado um ID válido, redireciona com erro
+    ob_end_clean();
+    header("Location: ../../edit_burguer.php?Mensagem=ID_invalido");
+    exit;
 }
 ?>

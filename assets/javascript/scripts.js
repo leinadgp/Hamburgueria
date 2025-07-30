@@ -25,7 +25,6 @@ function btnForEach() {
                 
             </li>
             `);
-        console.log(item.price);
         
     });
 
@@ -107,10 +106,6 @@ function btnReduce() {
 
         }).format(somaBurguerDescont)  
 
-    console.log(somaTotal);
-    console.log(somaBurguerDescont);
-
-
      lista.innerHTML = `
                 <li class="item-price">
                 <p>A soma total dos produtos sem desconto</p>
@@ -130,7 +125,6 @@ function btnFilter(tipo){
     clearr()
     
     const listaFiltrada = menuOptions.filter(item => item[tipo] === "1");
-        console.log(listaFiltrada);
         
         listaFiltrada.forEach(item => {
 

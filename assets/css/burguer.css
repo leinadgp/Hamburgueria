@@ -55,3 +55,9 @@ img.imgBurguer {
    color:#ca1c1c;
 
 }
+@media (max-width: 768px) {
+  ul.burguer-list {
+    grid-template-columns: 250px 250px 250px;
+  }
+
+}
